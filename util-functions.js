@@ -93,4 +93,13 @@ function uniqueChars (str) {
 uniqueChars("abcabcbbbbbbbbbbvvvvvvvvv"); // 4
 
 // --------------------------------
+// Get Max td's from tables
+
+function getMaxTDs () {
+    const tables = document.getElementsByTagName('table');
+    const count = Array.from(tables, table => table.getElementsByTagName('td').length);
+    
+    return count.length > 0 ? Math.max(...count) : 0;
+}
+
 // --------------------------------
